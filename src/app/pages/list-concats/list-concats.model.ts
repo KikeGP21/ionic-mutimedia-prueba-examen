@@ -1,3 +1,4 @@
+// 8.1º	Generar un interface para la ficha contacto de persona.
 export interface contacts{
     id: string
     email: string

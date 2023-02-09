@@ -5,10 +5,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fondo">
   <ion-list>
     <!-- **Variable del list-concats.page.ts -->
-    <!-- 8.1º Al método denominado “view_Contact” se le pasa como parámetro el objeto que estamos recorriendo, eso significa que pasará como parámetro la ficha de la persona en la que hagamos click: -->
+    <!-- 8.0º Al método denominado “view_Contact” se le pasa como parámetro el objeto que estamos recorriendo, eso significa que pasará como parámetro la ficha de la persona en la que hagamos click: -->
     <ion-item *ngFor="let contacto of contactos" (click) = "view_Contact(contacto)">
       
       <ion-avatar slot="start">

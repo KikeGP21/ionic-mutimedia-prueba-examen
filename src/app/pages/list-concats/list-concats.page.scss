@@ -1,0 +1,10 @@
+// 8.2º Generar hojas de estilos personalizadas o themes personalizados.
+ion-toolbar{
+    --background: #222428;
+    --color: white;
+}
+
+ion-content{
+    --background: #92949c;
+    color: white;
+}
