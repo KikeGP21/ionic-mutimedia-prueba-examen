@@ -1,4 +1,4 @@
-export interface concats{
+export interface contacts{
     id: string
     email: string
     first_name: string

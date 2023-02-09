@@ -6,5 +6,19 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <!-- **Variable del list-concats.page.ts -->
+    <!-- 8.1º Al método denominado “view_Contact” se le pasa como parámetro el objeto que estamos recorriendo, eso significa que pasará como parámetro la ficha de la persona en la que hagamos click: -->
+    <ion-item *ngFor="let contacto of contactos" (click) = "view_Contact(contacto)">
+      
+      <ion-avatar slot="start">
+        <ion-img [src]="contacto.avatar"></ion-img>
+      </ion-avatar>
 
+      <ion-label>{{contacto.first_name}}</ion-label>
+      <ion-label>{{contacto.last_name}}</ion-label>
+      <ion-label>{{contacto.email}}</ion-label>
+    
+    </ion-item>
+  </ion-list>
 </ion-content>
