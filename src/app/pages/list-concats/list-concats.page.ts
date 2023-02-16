@@ -9,27 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-concats.page.scss'],
 })
 export class ListConcatsPage implements OnInit {
-
   // 4.1º Poner el título de la página “list-contacts” a través de un binding con variable y que se denomine: “Lista de contactos”:
-  public titulo: String = 'Lista de contactos'; 
+  public titulo: String = 'Lista de contactos';
   // 6.1º Desde la págna “list-contacts” tenéis que llamar al servicio que habéis creado nuevo “get_contacts” para traeros la información que vamos a pintar en esta página.
   public contactos: any;
 
   // 6.2º
-  constructor(private _contactsService: ContactsService, private _router: Router) { }
+  constructor(
+    private _contactsService: ContactsService,
+    private _router: Router
+  ) {}
 
-   /**
+  /**
    * Llama al servicio de obtener fotos de la clase 'photos.service.ts'
    */
-   ngOnInit(){
+  ngOnInit() {
     // 6.3º
-    this._contactsService.get_contacts().subscribe(data =>{
-      this.contactos = data
-      this.contactos = this.contactos.data
-    })
+    this._contactsService.get_contacts().subscribe((data) => {
+      this.contactos = data;
+      this.contactos = this.contactos.data;
+    });
   }
 
-  view_Contact(contact: ListConcatsPageModule){
-    this._router.navigate(['/list-concats/contacts-detail',{contact: JSON.stringify(contact)}]);
+  view_Contact(contact: ListConcatsPageModule) {
+    this._router.navigate([
+      '/list-concats/contacts-detail',
+      { contact: JSON.stringify(contact) },
+    ]);
   }
 }
